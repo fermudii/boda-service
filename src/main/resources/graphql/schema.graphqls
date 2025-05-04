@@ -1,0 +1,40 @@
+type Invite {
+    id: ID!
+    fullname: String!
+    alias: String!
+    phone: String!
+    attendance: Boolean
+    comments: String!
+    guestsCount: Float!
+    timestamp: String
+    token: String
+}
+
+input UpdateInviteInput {
+    fullname: String!
+    phone: String!
+    attendance: Boolean!
+    comments: String!
+    guestsCount: Float!
+}
+
+type Query {
+    invites: [Invite]
+    inviteById(id: ID!): Invite
+    inviteByToken(token: String!): Invite
+}
+
+type Mutation {
+    createInvite(
+        fullname: String!,
+        alias: String!,
+        phone: String!
+    ): Invite
+
+    updateInvite(
+        id: ID!,
+        input: UpdateInviteInput
+    ): Invite
+
+
+}
