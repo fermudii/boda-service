@@ -31,7 +31,7 @@ dependencies {
 	implementation("com.h2database:h2") // In-memory database
 
 	// Development
-	developmentOnly("$SPRING_BOOT_STARTER_DEPENDENCY-devtools")
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
 	// Logging
 	implementation("$SPRING_BOOT_STARTER_DEPENDENCY-logging")
