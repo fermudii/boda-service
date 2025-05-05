@@ -29,6 +29,7 @@ dependencies {
 	implementation("$SPRING_BOOT_STARTER_DEPENDENCY-graphql")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("com.h2database:h2") // In-memory database
+	implementation("org.postgresql:postgresql:42.7.5")
 
 	// Development
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
