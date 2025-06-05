@@ -46,4 +46,12 @@ class InviteResolver(private val inviteService: InviteService) {
         @Argument id: Long,
         @Argument input: UpdateInviteInput): InviteDTO =
         inviteService.updateInvite(id, input).toDTO()
+
+    @MutationMapping
+    fun deleteInvite(
+        @Argument id: Long): Boolean {
+        inviteService.deleteInvite(id)
+        return true;
+    }
+
 }

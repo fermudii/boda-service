@@ -44,4 +44,9 @@ class InviteRepositoryAdapter(
             throw NotFoundException("Invite not found by token $token")
         )
     }
+
+    override fun deleteById(id: Long) {
+        logger.info("Deleting invite...")
+        inviteRepositorySpringDataRepository.deleteById(id)
+    }
 }

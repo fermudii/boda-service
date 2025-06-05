@@ -2,6 +2,7 @@ package co.mudii.coyolicatzin.application.service
 
 import co.mudii.coyolicatzin.domain.model.Invite
 import co.mudii.coyolicatzin.domain.use_case.CreateInviteUseCase
+import co.mudii.coyolicatzin.domain.use_case.DeleteInviteUseCase
 import co.mudii.coyolicatzin.domain.use_case.GetInviteByIdUseCase
 import co.mudii.coyolicatzin.domain.use_case.GetInviteByTokenUseCase
 import co.mudii.coyolicatzin.domain.use_case.GetInviteUseCase
@@ -16,6 +17,7 @@ class InviteService(
     private val getInviteUseCase: GetInviteUseCase,
     private val getInviteByTokenUseCase: GetInviteByTokenUseCase,
     private val updateInviteUseCase: UpdateInviteUseCase,
+    private val deleteInviteUseCase: DeleteInviteUseCase
 ) {
     fun createInvite(
         fullname: String,
@@ -35,4 +37,6 @@ class InviteService(
 
     fun updateInvite(id: Long, input: UpdateInviteInput): Invite =
         updateInviteUseCase.execute(id, input)
+
+    fun deleteInvite(id: Long) = deleteInviteUseCase.execute(id)
 }

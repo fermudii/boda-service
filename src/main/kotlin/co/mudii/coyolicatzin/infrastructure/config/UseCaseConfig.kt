@@ -2,6 +2,7 @@ package co.mudii.coyolicatzin.infrastructure.config
 
 import co.mudii.coyolicatzin.domain.repository.InviteRepository
 import co.mudii.coyolicatzin.domain.use_case.CreateInviteUseCase
+import co.mudii.coyolicatzin.domain.use_case.DeleteInviteUseCase
 import co.mudii.coyolicatzin.domain.use_case.GetInviteByIdUseCase
 import co.mudii.coyolicatzin.domain.use_case.GetInviteByTokenUseCase
 import co.mudii.coyolicatzin.domain.use_case.GetInviteUseCase
@@ -31,4 +32,8 @@ class UseCaseConfig {
     @Bean
     fun updateInviteUseCase(inviteRepository: InviteRepository): UpdateInviteUseCase =
         UpdateInviteUseCase(inviteRepository)
+
+    @Bean
+    fun deleteInviteUseCase(inviteRepository: InviteRepository): DeleteInviteUseCase =
+        DeleteInviteUseCase(inviteRepository)
 }

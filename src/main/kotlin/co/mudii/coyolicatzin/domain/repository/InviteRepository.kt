@@ -12,4 +12,6 @@ interface InviteRepository {
     fun findById(id: Long): Invite
 
     fun findByToken(token: String): Invite
+
+    fun deleteById(id: Long): Unit
 }
