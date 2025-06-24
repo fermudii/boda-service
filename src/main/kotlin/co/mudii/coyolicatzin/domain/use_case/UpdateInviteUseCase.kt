@@ -10,6 +10,7 @@ class UpdateInviteUseCase(private val repository: InviteRepository) {
         val foundInvite = repository.findById(id)
         foundInvite.apply {
             fullname = input.fullname
+            alias = input.alias
             phone = input.phone
             comments = input.comments
             attendance = input.attendance

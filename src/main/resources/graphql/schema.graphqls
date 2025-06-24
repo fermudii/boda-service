@@ -12,8 +12,9 @@ type Invite {
 
 input UpdateInviteInput {
     fullname: String!
+    alias: String!
     phone: String!
-    attendance: Boolean!
+    attendance: Boolean
     comments: String!
     guestsCount: Float!
 }

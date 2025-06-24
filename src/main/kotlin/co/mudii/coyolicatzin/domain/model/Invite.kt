@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 data class Invite(
     val id: Long = 0,
     var fullname: String = "",
-    val alias: String = "",
+    var alias: String = "",
     var phone: String = "",
     var attendance: Boolean? = null,
     var comments: String = "",
